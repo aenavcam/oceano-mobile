@@ -22,8 +22,14 @@ app.get('/main', function(req, res){
         link = data.find("a.jp-download").attr('href');
         description = data.find("div.pos-content").children().first().text().trim();
 
-        posts.push({title:title, section:section, link:link, description:description})
-      })
+        posts.push({
+          title:title
+        , section:section
+        , link:link
+        , description:description
+        });
+
+      });
 
       res.send(posts);
     }
