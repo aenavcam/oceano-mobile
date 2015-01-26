@@ -15,8 +15,6 @@ app.get('/main', function(req, res){
       var title, section, link, description;
 
       $('.teaser-item').each(function(){
-        console.log($(this).html());
-
         var data = $(this);
         title = data.find("h1.pos-title").children().first().text();
         section = data.find("p.pos-meta").children().first().attr('href');
