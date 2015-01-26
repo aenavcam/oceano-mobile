@@ -3,8 +3,9 @@ var request = require('request');
 var cheerio = require('cheerio');
 var app = express();
 
-app.get('/main', function(req, res){
+app.set('port', (process.env.PORT || 5000));
 
+app.get('/main', function(req, res){
   var url = 'http://www.oceanofm.com/blog/frontpage/';
 
   request({ url:url, headers:{'User-Agent': 'aenavcam scrapper/0.0.1'}}, function(error, response, html){
@@ -36,8 +37,6 @@ app.get('/main', function(req, res){
   })
 })
 
-var server = app.listen('8081')
-
-console.log('Server started on port 8081');
-
-exports = module.exports = app;
+app.listen(app.get('port'), function() {
+  console.log("Node app is running at localhost:" + app.get('port'));
+});
