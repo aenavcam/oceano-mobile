@@ -1,0 +1,12 @@
+{
+  "name"         : "oceano-mobile-server",
+  "version"      : "0.0.1",
+  "description"  : "Better OceanoFM",
+  "main"         : "server.js",
+  "author"       : "aenavcam",
+  "dependencies" : {
+    "express"    : "latest",
+    "request"    : "latest",
+    "cheerio"    : "latest"
+  }
+}
