@@ -6,12 +6,8 @@ var app = express();
 app.get('/main', function(req, res){
 
   var url = 'http://www.oceanofm.com/blog/frontpage/';
-  var headers = {
-    'User-Agent':       'Super Agent/0.0.1',
-    'Content-Type':     'application/x-www-form-urlencoded'
-  }
 
-  request({url:url, headers:headers}, function(error, response, html){
+  request({ url:url, headers:{'User-Agent': 'aenavcam scrapper/0.0.1'}}, function(error, response, html){
     if(!error){
       var $ = cheerio.load(html);
       var posts = [];
