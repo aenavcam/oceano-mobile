@@ -18,7 +18,7 @@ app.get('/main', function(req, res){
         var data = $(this);
         title = data.find("h1.pos-title").children().first().text();
         section = data.find("p.pos-meta").children().first().attr('href');
-        link = data.find("a.jp-download").attr('href');
+        link = 'http://oceanofm.com' + data.find("a.jp-download").attr('href');
         description = data.find("div.pos-content").children().first().text().trim();
 
         posts.push({
